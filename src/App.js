@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import { Box, Heading, HStack, Text } from "@chakra-ui/react";
+import Form from "./components/Form";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box>
+      <Box bg="#0077b6" h="100px">
+        <HStack h="100%" justifyContent="space-around">
+          <Heading color="white">Transportes ADA</Heading>
+          <Link to="/bookings">
+            <Text as="b" color="white">
+              Ver reservas
+            </Text>
+          </Link>
+        </HStack>
+      </Box>
+      <Form />
+    </Box>
   );
 }
 
